@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "ecce0833-fa41-449d-b35b-7c78cde37000",
+		"name": "Gatosoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36337991"
+	},
+	"item": [
+		{
+			"name": "Verify",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/domain/verify",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"domain",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNS List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/domain/dns/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"domain",
+						"dns",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckMyIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/domain/ip",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"domain",
+						"ip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNS Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/domain/dns/update?record_id=ad40a764c18f5645e6c983bd5fdc4008&new_ip=88.16.211.113",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"domain",
+						"dns",
+						"update"
+					],
+					"query": [
+						{
+							"key": "record_id",
+							"value": "ad40a764c18f5645e6c983bd5fdc4008"
+						},
+						{
+							"key": "new_ip",
+							"value": "88.16.211.113"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNS Auto Update Task Change Schedule Timer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/domain/dns/auto_update_task/schedule_timer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"domain",
+						"dns",
+						"auto_update_task",
+						"schedule_timer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNS Auto Update Task Change Schedule Timer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/domain/dns/auto_update_task/update_schedule_timer?new_timer=15",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"domain",
+						"dns",
+						"auto_update_task",
+						"update_schedule_timer"
+					],
+					"query": [
+						{
+							"key": "new_timer",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNS Auto Update Task Change Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/domain/dns/auto_update_task/update_status?status=START",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"domain",
+						"dns",
+						"auto_update_task",
+						"update_status"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "START"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DNS Auto Update Task Force",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/domain/dns/auto_update_ip/force",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"domain",
+						"dns",
+						"auto_update_ip",
+						"force"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
