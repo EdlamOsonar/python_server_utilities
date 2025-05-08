@@ -10,17 +10,14 @@ import json
 from typing import Union, List
 from fastapi import FastAPI, BackgroundTasks
 from apscheduler.schedulers.background import BackgroundScheduler
-from config.config import bearer_token_dns
-from config.config import zone_id
-from config.config import account_id
-from config.config import domain_name
+
+bearer_token_dns = "REPLACE_WITH_CLOUDFLARE_BEARER_TOKEN"
+zone_id = "REPLACE_WITH_CLOUDFLARE_DOMAIN_ID"
+account_id = "REPLACE_WITH_CLOUDFLARE_ACCOUNT_ID"
+domain_name= "REPLACE_WITH_CLOUDFLARE_DOMAIN_NAME"
 
 
 app = FastAPI()
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(current_dir,  'config'))
-
 
 # Configure logging
 logging.basicConfig(
@@ -36,7 +33,7 @@ headers = {
 }
 
 # configure scheduler
-timer = 60#21600 #  segundos (6 horas)
+timer =60 #segundos        
 scheduler = BackgroundScheduler()
 
 @app.post("/domain/dns/auto_update_ip/force")

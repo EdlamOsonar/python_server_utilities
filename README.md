@@ -9,4 +9,7 @@
     pip install -r requirements.txt
 
 ### Start server
-    uvicorn main:app -reload                                                                                                  
+    uvicorn main:app -reload           
+
+## Docker build
+    docker build -t domain_tools:1.0.0 .                                                                                       
